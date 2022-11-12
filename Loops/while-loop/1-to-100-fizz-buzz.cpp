@@ -12,14 +12,14 @@ int main(){
     int i=1;
     while(i<100){
         if(i%3==0 && i%5==0){
-            cout<<"FizzBuzz\n";
+            cout<<"FizzBuzz"<<" ";
         }
         else{
             if(i%3==0){
-                cout<<"Fizz\n";
+                cout<<"Fizz"<<" ";
             }
             else if(i%5==0){
-                cout<<"Buzz\n";
+                cout<<"Buzz"<<" ";
             }
             else{
                 cout<<i<<" ";
