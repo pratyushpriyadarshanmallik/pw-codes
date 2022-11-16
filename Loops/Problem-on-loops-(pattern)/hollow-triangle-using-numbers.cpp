@@ -1,9 +1,9 @@
 /*Given n, print a triangular pattern as shown in the example below.  
 Example if n=4  
    1  
-  222  
- 33333  
-4444444  */
+  2 2  
+ 3   3  
+4444444       */
 #include<iostream>
 using  namespace std;
 int main(){
