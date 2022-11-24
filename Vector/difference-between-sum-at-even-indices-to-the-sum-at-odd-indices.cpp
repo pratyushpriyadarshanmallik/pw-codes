@@ -1,0 +1,23 @@
+/** Find the difference between the sum of elements at even indices to the sum of elements at odd
+indices.*/
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    int n; cout<<"Size of Array: "; cin>>n;
+    vector<int> v(n);
+    cout<<"Elements of Array: ";
+    for(int i=0;i<n;i++){
+        cin>>v[i];
+    }
+    int sum=0;
+    for(int i=0;i<n;i++){
+        if(i%2==0){
+            sum+=v[i];
+        }else{
+            sum-=v[i];
+        }
+    }
+    cout<<"Sum is: "<<sum;
+    return 0;
+} 
