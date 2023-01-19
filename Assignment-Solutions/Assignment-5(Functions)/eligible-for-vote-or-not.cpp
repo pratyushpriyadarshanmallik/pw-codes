@@ -6,14 +6,15 @@ bool checkEligibilty(int age , int limit){
         return true;
     }
     else{
-        //thr person is not eligible
+        //the person is not eligible
         return false;
     }
 }
 int main(){
-    int age, limit;
-    cin>>age >>limit;
-    int is_eligible_for_voting  = checkEligibilty(age , 18);
+    int age;
+    cin>>age;
+    int limit =18;
+    int is_eligible_for_voting  = checkEligibilty(age , limit);
     if(is_eligible_for_voting==true){
         cout<<"Yes"<<endl;
     }
