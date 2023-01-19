@@ -1,18 +1,24 @@
-/*Given the age of a person, write a function to check if the person is eligible to vote or not.*/
 #include<iostream>
 using namespace std;
-void voteornot(int age){
-    if(age>=18){
+bool checkEligibilty(int age , int limit){
+    if(age>=limit){
+        //the person is eligible 
+        return true;
+    }
+    else{
+        //thr person is not eligible
+        return false;
+    }
+}
+int main(){
+    int age, limit;
+    cin>>age >>limit;
+    int is_eligible_for_voting  = checkEligibilty(age , 18);
+    if(is_eligible_for_voting==true){
         cout<<"Yes"<<endl;
     }
     else{
         cout<<"No"<<endl;
     }
-    return ;
-}
-int main(){
-    int age;
-    cout<<"Enter your age:";
-    cin>>age;
-    voteornot(age);
+    return 0;
 }
