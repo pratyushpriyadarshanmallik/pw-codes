@@ -7,7 +7,7 @@ int main(){
     int odd_count =0;
     int even_count=0;
     for(int i=0;i<n;i++){
-        if(i%2==0){
+        if(arr[i]%2==0){
             even_count++;
         }
         else{
