@@ -3,33 +3,30 @@ number sorted in non-decreasing/increasing order. */
 #include<iostream>
 #include<vector>
 using namespace std;
-void SortedSquaredArray(vector<int> &v){
-    vector<int> ans;
-    int left_ptr=0; //2
-    int right_ptr=v.size()-1; //2
+void squareSort(vector <int> &v){//-10 -3 2 3 4 6
+    vector<int> ans; //100 36 16 9 9 4 
+    int left_ptr=0; // 1
+    int right_ptr=v.size()-1;//2
     while(left_ptr<=right_ptr){
-        if((abs(v[left_ptr]))<(abs(v[right_ptr]))){
+        if(abs(v[left_ptr])>abs(v[right_ptr])){
+            ans.push_back(v[left_ptr]*v[left_ptr]);
+            left_ptr++;
+        }
+        else{
             ans.push_back(v[right_ptr]*v[right_ptr]);
             right_ptr--;
         }
-        else{
-            ans.push_back(v[left_ptr]*v[left_ptr]);
-            left_ptr++;            //100 25 16 9 4
-        }
     }
-    for(int i=ans.size()-1;i>=0;i--){    
-        cout<<ans[i]<<" ";  //4 9 16 25 100
+    for(int i=ans.size()-1;i>0;i--){
+        cout<<ans[i]<<" ";
     }
-    return;
 }
 int main(){
-    int n; cout<<"Size of Array: "; cin>>n; //5  
-    vector<int> v;
-    cout<<"Elements of Array: ";
-    for(int i=0;i<n;i++){
-        int ele; cin>>ele; //-10 -3 2 4 5
-        v.push_back(ele);
+    int n; cin>>n;
+    vector<int> v(n);
+    for(int i=0;i<v.size();i++){
+        cin>>v[i];
     }
-    SortedSquaredArray(v);
+    squareSort(v);
     return 0;
 }
