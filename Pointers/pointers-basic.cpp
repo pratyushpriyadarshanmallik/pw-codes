@@ -8,6 +8,12 @@ int main(){
     int *ptr1 = &x;//Integer Pointer 
     cout<<ptr1<<" ";
     float *ptr2= &y;//Float Pointer
-    cout<<ptr2<<" ";
+    cout<<ptr2<<endl;
+
+    //Declaring the pointer and reassigning it 
+    int *pointer; // Only declaration 
+    cout<<pointer<<" ";
+    pointer = &x; //Re assigning the pointer 
+    cout<<pointer<<" ";
     return 0;
 }
