@@ -6,12 +6,13 @@ int alternateSignSum(int num){
     if(num ==0){
         return 0;
     }
-    if(num%2==0){
-        return ((alternateSignSum(num-1))-num);
-    }
-    else{
-        return ((alternateSignSum(num-1))+num);
-    }
+    // if(num%2==0){
+    //     return ((alternateSignSum(num-1))-num);
+    // }
+    // else{
+    //     return ((alternateSignSum(num-1))+num);
+    // }
+    return alternateSignSum(num-1) + ((num%2 ==0) ? -num : +num);
 }
 int main(){
     int num =5;
