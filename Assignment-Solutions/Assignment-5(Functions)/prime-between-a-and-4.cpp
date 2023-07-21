@@ -1,11 +1,11 @@
+//- Given two numbers a and b, write a program to print all the prime numbers present between a and b
 #include<iostream>
-#include<math.h>
 using namespace std;
-bool isprime(int n){
+bool isPrime(int n){
     if(n==2){
         return true;
     }
-    for(int i=2;i<sqrt(n);i++){
+    for (int i=2;i<n;i++){
         if(n%i==0){
             return false;
         }
@@ -13,34 +13,13 @@ bool isprime(int n){
     return true;
 }
 int main(){
-    int a,b;
-    cin>>a>>b;
+    int a ;
+    cin>>a;
+    int b;
+    cin>>b;
     for(int i=a;i<b;i++){
-        if(isprime(i)==true){
-            cout<<i<<" ";
-        }
-    }
-    return 0;
-}
-#include<iostream>
-using namespace std;
-bool isprime(int n){
-    if(n==2){
-        return true;
-    }
-    for(int i=2;i<n;i++){
-        if(n%i==0){
-            return false;
-        }
-    }
-    return true;
-}
-int main(){
-    int a,b;
-    cin>>a>>b;
-    for(int i=a;i<b;i++){
-        if(isprime(i)==true){
-            cout<<i<<" ";
+        if(isPrime(i)==true){
+            cout<<i<<endl;
         }
     }
     return 0;
